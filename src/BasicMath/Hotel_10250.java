@@ -13,8 +13,8 @@ public class Hotel_10250 {
 		int t = Integer.parseInt(br.readLine());// 케이스 수
 		StringBuilder sb = new StringBuilder();
 
-		int y = 0; // n을 h로 나눈 나머지가 손님의 층 수
-		int x = 0; // n을 h로 나눈 몫+1이 엘베로부터 떨어진 거리
+//		int y = 0; // n을 h로 나눈 나머지가 손님의 층 수
+//		int x = 0; // n을 h로 나눈 몫+1이 엘베로부터 떨어진 거리
 		for (int i = 0; i < t; i++) {
 //			int h = Integer.parseInt(br.readLine());// 층수
 //			int w = Integer.parseInt(br.readLine());// 방수
@@ -24,17 +24,17 @@ public class Hotel_10250 {
 			int w = Integer.parseInt(st.nextToken());
 			int n = Integer.parseInt(st.nextToken());
 
-			if (n % h != 0) {
-				y = (n % h) * 100;
-				x = (n / h) + 1;
+			if (n % h == 0) {
+			
+				sb.append((h*100)+(n/h)+"\n");
 			} else {
-				y = h * 100;
-				x = n / h;
+	
+				sb.append(((n%h)*100)+((n/h)+1)+"\n");
 
 			}
 
 		}
-		sb.append(y + x);
+		
 		System.out.println(sb);
 
 	}
